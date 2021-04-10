@@ -1,0 +1,136 @@
+<ngb-accordion #acc="ngbAccordion" class="index-page">
+  
+  <ngb-panel id="toggle-1" title="Architecture">
+    <ng-template ngbPanelContent>
+      Please implement atleast todos list page in <a href="https://github.com/angular-online/todos-angular-app" target="_blank">Todos app</a> to understand architecture of Angular framework.
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel id="toggle-2" title="Components & Templates">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Displaying Data</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/display-data-in-template']">Component with template</a></li>
+            <li><a [routerLink]="['/components-templates/display-data-in-templateurl']">Component with template url</a></li>
+          </ul>
+        </li>
+
+        <li class="heading">
+          <h6>2. Template Syntax</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/template-syntax']">Template Syntax</a></li>
+            <li><a [routerLink]="['/components-templates/custom-events']">Custom Events / EventEmitter</a></li>
+            <li><a [routerLink]="['/components-templates/two-way-binding']">Two-Way binding and NgModel</a></li>
+          </ul>
+        </li>
+
+        <li class="heading">
+          <h6>3. Directives</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/directives']">Directives Examples</a></li>
+          </ul>
+        </li>
+
+        <li class="heading">
+          <h6>4. Component Interaction</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/component-interaction']">Component Interaction Examples</a></li>
+          </ul>
+        </li>
+
+        <li class="heading">
+          <h6>5. Component Lifecycle Hooks</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/lifecycle-hooks']">Component Lifecycle Hooks</a></li>
+          </ul>
+        </li>
+
+        <li class="heading">
+          <h6>6. Pipes</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/components-templates/pipes']">Pipes Examples</a></li>
+          </ul>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel id="toggle-3" title="Observables & RxJS">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Observables</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/rxjs/observables-demo']">Observables Demo</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>2. Subjects</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/rxjs/subjects-demo']">Subjects Demo</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>3. Operators</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/rxjs/operators-demo']">Operators Demo</a></li>
+            <li><a [routerLink]="['/rxjs/different-operators']">Different Operators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel id="toggle-4" title="NgModules & Dependency Injection">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Lazy Loading Feature Modules</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/ngmodules/lazy-loading']">Lazy Loading Feature Modules Demo</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>2. Singleton Services / Eager Loading Vs Lazy Loading</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/ngmodules/eager-vs-lazy-loading']">Eager Loading Vs Lazy Loading Demo</a></li>
+          </ul>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+  <ngb-panel id="toggle-5" title="Forms">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Reactive Forms</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['../forms/reactive/form-control']">Form Control</a></li>
+            <li><a [routerLink]="['../forms/reactive/form-group']">Form Group</a></li>
+            <li><a [routerLink]="['../forms/reactive/nested-form-group']">Nested Form Group</a></li>
+            <li><a [routerLink]="['../forms/reactive/form-builder']">Form Builder</a></li>
+            <li><a [routerLink]="['../forms/reactive/form-array']">Form Array</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>2. Template Driven Forms</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['../forms/template-driven']">Template Driven Forms</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>3. Form Validation</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['../forms/validation/reactive']">Reactive Forms Validation</a></li>
+            <li><a [routerLink]="['../forms/validation/template-driven']">Template-Driven Forms Validation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </ng-template>
+  </ngb-panel>
+
+</ngb-accordion>
+
