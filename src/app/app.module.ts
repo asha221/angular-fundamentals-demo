@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgmodulesModule } from './ngmodules/ngmodules.module';
 import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +21,6 @@ import { IndexComponent } from './index/index.component';
     AppRoutingModule,
     ComponentsTemplatesModule,
     NgbModule,
-    NgmodulesModule,
     FormsModule
   ],
   providers: [],
