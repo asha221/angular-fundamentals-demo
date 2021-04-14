@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
-import { RxjsModule } from './rxjs/rxjs.module';
 
 
 @NgModule({
@@ -23,7 +22,6 @@ import { RxjsModule } from './rxjs/rxjs.module';
     AppRoutingModule,
     ComponentsTemplatesModule,
     NgbModule,
-    RxjsModule,
     NgmodulesModule,
     FormsModule
   ],
