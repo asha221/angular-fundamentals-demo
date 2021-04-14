@@ -134,3 +134,34 @@
 <br><br>
 <input type="text" (keypress)="onSave($event)"/>
 <!-- click and keypress are the native events and button is a native element -->
+
+<br>
+<hr>
+<h6><b>Template reference variables ( #hero )</b></h6>
+<form (ngSubmit)="onSubmit(heroForm)" ngForm #heroForm="ngForm" id="hero-form">
+  <div class="form-group">
+    <label for="name">Phone: {{ phoneRef.value }}
+      <input class="form-control" id="phone" name="phone" #phoneRef [(ngModel)]="phone">
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="name">Name: {{ name.value }}
+      <input class="form-control" name="name" [(ngModel)]="currentHero.name" #name="ngModel" required minlength="4" maxlength="10" >
+    </label>
+
+    <div><pre>{{ name.errors | json }}</pre></div>
+
+    <div *ngIf="name.invalid">
+      <div *ngIf="name.errors.required">
+        Name is required
+      </div> 
+      <div *ngIf="name.errors.minlength">
+        Name should be morethan 4 chars
+      </div>   
+      <div *ngIf="name.errors.maxlength">
+        Name shouldn't be morethan 10 chars
+      </div>  
+    </div>
+  </div>
+  <button type="submit" [disabled]="!heroForm.form.valid">Submit</button>
+</form>

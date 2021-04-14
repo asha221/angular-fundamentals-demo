@@ -22,6 +22,8 @@ export class TemplateSyntaxComponent implements OnInit {
 
   formNotChanged = true;
 
+  actionName = "Save";
+
   updateHero() {
     this.currentHero = {
       name: "John",
@@ -63,6 +65,12 @@ export class TemplateSyntaxComponent implements OnInit {
   onSave(event: any) {
     console.log(event);
   }
+
+  onSubmit(heroForm: any) {
+    console.log(heroForm);
+  }
+
+  nullHero = null;
 
   constructor() { }
 

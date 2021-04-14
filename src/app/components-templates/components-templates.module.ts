@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { DisplayDataInTemplateurlComponent } from './display-data-in-templateurl/display-data-in-templateurl.component';
 import { DisplayDataInTemplateComponent } from './display-data-in-template/display-data-in-template.component';
@@ -19,7 +20,8 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 @NgModule({
   declarations: [DisplayDataInTemplateurlComponent, DisplayDataInTemplateComponent, TemplateSyntaxComponent, DirectivesComponent, ComponentInteractionComponent, LifecycleHooksComponent, PipesComponent, DisplayHeroComponent, HeroBioComponent, HeroDetailComponent, CustomEventsComponent, TwoWayBindingComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class ComponentsTemplatesModule { }
