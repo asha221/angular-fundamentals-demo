@@ -1,1 +1,117 @@
-<p>directives works!</p>
+<h6><b>Attribute Directives</b></h6>
+
+<br>
+<h6>appHighlight - With static color:</h6>
+<p appHighlight>Highlight me!</p>
+
+<br>
+<h6>appHighlightV1 - Respond to user-initiated events:</h6>
+<p appHighlightV1>Highlight me!</p>
+
+<br>
+<h6>appHighlightV2 - Pass values into the directive with an @Input data binding:</h6>
+<p appHighlightV2>highlightColor is not passed. So, It would be highlighted with default color(red) specified in
+    directive.</p>
+<p appHighlightV2 [highlightColor]="color">Highlight me in the color specified by component(green)</p>
+
+<br>
+<h6>appHighlightV3 - Bind to an @Input alias:</h6>
+<p appHighlightV3 [appHighlightV3]="color">Highlight me - Used both property and directive names</p>
+<p [appHighlightV3]="color">Highlight me - Used property and directive names together.</p>
+
+<br>
+<hr>
+<h6><b>Structural Directives</b></h6>
+
+<br>
+<h6>*ngIf:</h6>
+
+<div [style.display]="currentHero ? 'block': 'none'">{{currentHero.name}}</div>
+<div [style.display]="nullHero ? 'block': 'none'">{{nullHero?.name}}</div>
+<!-- the above statement will keep these null statement in DOM means console but *ngIf will completially remove the null value -->
+
+<div *ngIf="currentHero" class="name">{{currentHero.name}}</div>
+<div *ngIf="nullHero" class="name">{{nullHero.name}}</div>
+
+<br>
+<h6>*ngFor:</h6>
+<div>*ngFor with index:</div>
+<div *ngFor="let hero of heroes; let i=index">{{i + 1}} - {{hero.name}}</div>
+
+<br>
+<div>*ngFor without trackBy:</div>
+<div *ngFor="let hero of heroes">
+    ({{hero.id}}) {{hero.name}}
+</div>
+<br>
+<div>*ngFor with trackBy:</div>
+<div *ngFor="let hero of heroes; trackBy: trackByHeroes">
+    ({{hero.id}}) {{hero.name}}
+</div>
+
+<br>
+<button class="btn btn-primary" (click)="updateWihDifferentNames()">Update Heroes With Different Names</button>
+&nbsp;&nbsp;
+<button class="btn btn-primary" (click)="updateWithDifferentIds()">Update Heroes With Different Ids</button>
+
+<!-- *ngFor with trackBy will remove all the elements and will again load all the elements it is problem when we have many number of elements by using trackby we can avoid that problem. but in some cases we have to load everything if we change the id names in such cases we can reload all the data by using trackby returing id. -->
+
+<br>
+<br>
+<h6>ng-template</h6>
+<p>Hip!</p>
+<ng-template>
+    <p>Hip!</p>
+</ng-template>
+<p>Hooray!</p>
+
+<br>
+<h6>ng-container</h6>
+<p>
+    I turned the corner
+    <span *ngIf="currentHero">
+        and saw {{currentHero.name}}. I waved
+    </span>
+    and continued on my way.
+</p>
+
+<p>
+    I turned the corner
+    <ng-container *ngIf="currentHero">
+        and saw {{currentHero.name}}. I waved
+    </ng-container>
+    and continued on my way.
+</p>
+<!-- we use ng-container when we don't have any sutiable element to write the data in a single line in such cases we use these ng-container.beacuse if we use <p> the condition data will come in to next line. or we use <div> or any block level tags we will get that data in next line only by using <span> we are getting differetent styles for that data in .css we write styles for that span. -->
+
+<br>
+<h6>ng-container to group elements</h6>
+<label>With span</label><br>
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <span *ngFor="let h of heroes">
+        <span *ngIf="h.power > 3000">
+            <option [ngValue]="h">{{h.name}}</option>
+        </span>
+    </span>
+</select>
+
+<br>
+<br>
+<label>With ng-container</label><br>
+<select [(ngModel)]="currentHero">
+    <option value="">Select Hero</option>
+    <ng-container *ngFor="let h of heroes">
+        <ng-container *ngIf="h.power > 3000">
+            <option [ngValue]="h">{{h.name}}</option>
+        </ng-container>
+    </ng-container>
+</select>
+<!-- when we use span we wont get to see other elements than Select Hero because for <option> the dropdown data should be first child level by using span that tag won't be 1st child level. ig we use ng-container it will removes all that tags and every iteration becomes 1st child and all dropdowns will be display  -->
+<!-- ng-container tag will be removed while executing -->
+
+<br>
+<br>
+<h6>Custom structural directive: appReverseIf</h6>
+<p *appReverseIf="condition">This should be shown</p>
+<p *appReverseIf="!condition">This should be removed</p>
