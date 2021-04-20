@@ -12,6 +12,7 @@ import { TwoWayBindingComponent } from './components-templates/two-way-binding/t
 
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { InteractionComponent } from './components-templates/interaction/interaction.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'components-templates/custom-events', component:CustomEventsComponent},
   { path: 'components-templates/two-way-binding', component:TwoWayBindingComponent},
   { path: 'components-templates/directives', component:DirectivesComponent},
+  { path: 'components-templates/component-interaction',component:InteractionComponent},
 
   { path:'',redirectTo: 'index' ,pathMatch:'full'},
   { path:'**', component:PageNotFoundComponent}

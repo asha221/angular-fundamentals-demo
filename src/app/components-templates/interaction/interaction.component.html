@@ -1,0 +1,21 @@
+<h6><b>Component interaction</b></h6>
+<hr>
+<h6>Parent interacts with child via template reference variable:</h6>
+<app-countdown-parent-with-temp-ref-var></app-countdown-parent-with-temp-ref-var>
+
+<br><br><br>
+<h6>Using @ViewChild():</h6>
+<app-countdown-parent-with-view-child></app-countdown-parent-with-view-child>
+
+<br><br><br>
+<h6>Using @ContentChild():</h6>
+<!-- in user-details we have <ng-content> so below content will load there -->
+<app-user-detail #detail>
+    <div>User edit form start</div>
+    <app-edit-user [user]="detail.user"></app-edit-user>
+    <div>User edit form end</div>
+</app-user-detail>
+
+<br>
+<h6>Via a service:</h6>
+<app-simple-todo></app-simple-todo>

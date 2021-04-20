@@ -16,6 +16,15 @@ import { HighlightV2Directive } from './attribute-directives/highlight-v2.direct
 import { HighlightV1Directive } from './attribute-directives/highlight-v1.directive';
 import { HighlightDirective } from './attribute-directives/highlight.directive';
 import { ReverseIfDirective } from './structural-directive/reverse-if.directive';
+import { InteractionComponent } from './interaction/interaction.component';
+import { CountdownParentWithTempRefVarComponent } from './countdown-parent-with-temp-ref-var/countdown-parent-with-temp-ref-var.component';
+import { CountdownParentWithViewChildComponent } from './countdown-parent-with-view-child/countdown-parent-with-view-child.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
+import { TodoDetailComponent } from './todo-detail/todo-detail.component';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -34,10 +43,21 @@ import { ReverseIfDirective } from './structural-directive/reverse-if.directive'
     HighlightV1Directive,
     HighlightDirective,
     ReverseIfDirective,
+    InteractionComponent,
+    CountdownParentWithTempRefVarComponent,
+    CountdownParentWithViewChildComponent,
+    UserDetailComponent,
+    EditUserComponent,
+    CountdownTimerComponent,
+    SimpleTodoComponent,
+    TodoDetailComponent
+
     ],
   imports: [
     CommonModule,
     FormsModule
-  ]
+  ],
+  providers: [HttpClient]
+
 })
 export class ComponentsTemplatesModule { }
