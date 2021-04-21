@@ -16,6 +16,7 @@ import { InteractionComponent } from './components-templates/interaction/interac
 import { LifecycleHooksComponent } from './components-templates/lifecycle-hooks/lifecycle-hooks.component';
 import { LifeycleViewHooksComponent } from './components-templates/lifeycle-view-hooks/lifeycle-view-hooks.component';
 import { LifeycleContentHooksComponent } from './components-templates/lifeycle-content-hooks/lifeycle-content-hooks.component';
+import { PipesComponent } from './components-templates/pipes/pipes/pipes.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,8 @@ const routes: Routes = [
   { path: 'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
   { path: 'components-templates/lifecycle-view-hooks',component:LifeycleViewHooksComponent},
   { path: 'components-templates/lifeycle-content-hooks',component:LifeycleContentHooksComponent},
-
+  { path: 'components-templates/pipes',component:PipesComponent},
+  
   { path:'',redirectTo: 'index' ,pathMatch:'full'},
   { path:'**', component:PageNotFoundComponent}
 

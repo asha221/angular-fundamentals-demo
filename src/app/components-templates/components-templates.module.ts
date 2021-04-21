@@ -33,6 +33,11 @@ import { LifeycleViewHooksComponent } from './lifeycle-view-hooks/lifeycle-view-
 import { LifeycleContentHooksComponent } from './lifeycle-content-hooks/lifeycle-content-hooks.component';
 import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
 import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
+import { PipesComponent } from './pipes/pipes/pipes.component';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
+import { FormatNamePipe } from './pipes/format-name.pipe';
+import { FlyingHeroesPurePipe } from './pipes/flying-heroes-pure.pipe';
+import { FlyingHeroesImpurePipe } from './pipes/flying-heroes-impure.pipe';
 
 
 
@@ -64,7 +69,12 @@ import { UserAfterViewDetailComponent } from './user-after-view-detail/user-afte
     LifeycleViewHooksComponent,
     LifeycleContentHooksComponent,
     UserAfterContentDetailComponent,
-    UserAfterViewDetailComponent
+    UserAfterViewDetailComponent,
+    PipesComponent,
+    ExponentialStrengthPipe,
+    FormatNamePipe,
+    FlyingHeroesPurePipe,
+    FlyingHeroesImpurePipe
 
     ],
   imports: [
