@@ -13,6 +13,9 @@ import { TwoWayBindingComponent } from './components-templates/two-way-binding/t
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { InteractionComponent } from './components-templates/interaction/interaction.component';
+import { LifecycleHooksComponent } from './components-templates/lifecycle-hooks/lifecycle-hooks.component';
+import { LifeycleViewHooksComponent } from './components-templates/lifeycle-view-hooks/lifeycle-view-hooks.component';
+import { LifeycleContentHooksComponent } from './components-templates/lifeycle-content-hooks/lifeycle-content-hooks.component';
 
 
 const routes: Routes = [
@@ -27,6 +30,9 @@ const routes: Routes = [
   { path: 'components-templates/two-way-binding', component:TwoWayBindingComponent},
   { path: 'components-templates/directives', component:DirectivesComponent},
   { path: 'components-templates/component-interaction',component:InteractionComponent},
+  { path: 'components-templates/lifecycle-hooks',component:LifecycleHooksComponent},
+  { path: 'components-templates/lifecycle-view-hooks',component:LifeycleViewHooksComponent},
+  { path: 'components-templates/lifeycle-content-hooks',component:LifeycleContentHooksComponent},
 
   { path:'',redirectTo: 'index' ,pathMatch:'full'},
   { path:'**', component:PageNotFoundComponent}
