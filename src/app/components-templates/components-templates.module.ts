@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
 
 import { DisplayDataInTemplateurlComponent } from './display-data-in-templateurl/display-data-in-templateurl.component';
 import { DisplayDataInTemplateComponent } from './display-data-in-template/display-data-in-template.component';
@@ -25,6 +27,12 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
 import { SimpleTodoComponent } from './simple-todo/simple-todo.component';
 import { TodoDetailComponent } from './todo-detail/todo-detail.component';
 import { HttpClient } from '@angular/common/http';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { UserCycleComponent } from './user-cycle/user-cycle.component';
+import { LifeycleViewHooksComponent } from './lifeycle-view-hooks/lifeycle-view-hooks.component';
+import { LifeycleContentHooksComponent } from './lifeycle-content-hooks/lifeycle-content-hooks.component';
+import { UserAfterContentDetailComponent } from './user-after-content-detail/user-after-content-detail.component';
+import { UserAfterViewDetailComponent } from './user-after-view-detail/user-after-view-detail.component';
 
 
 
@@ -50,12 +58,19 @@ import { HttpClient } from '@angular/common/http';
     EditUserComponent,
     CountdownTimerComponent,
     SimpleTodoComponent,
-    TodoDetailComponent
+    TodoDetailComponent,
+    LifecycleHooksComponent,
+    UserCycleComponent,
+    LifeycleViewHooksComponent,
+    LifeycleContentHooksComponent,
+    UserAfterContentDetailComponent,
+    UserAfterViewDetailComponent
 
     ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [HttpClient]
 
