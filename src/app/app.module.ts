@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ComponentsTemplatesModule } from './components-templates/components-templates.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
+import { RxDemoModule } from './rx-demo/rx-demo.module';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { IndexComponent } from './index/index.component';
     ComponentsTemplatesModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RxDemoModule
 
   ],
   providers: [],

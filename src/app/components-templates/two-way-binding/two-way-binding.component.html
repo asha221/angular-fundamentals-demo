@@ -1,19 +1,19 @@
 <h6><b>Two way data binding without using NgModel Directive</b></h6>
 <div>Two way data binding on form elements, using property and event binding:</div>
 <div>Current hero name is: {{ currentHero.name }}</div>
-<input [value]="currentHero.name" (input)="currentHero.name=$event.target.value" >
+<!-- <input [value]="currentHero.name" (input)="currentHero.name=$event.target.value" > -->
 <br><br><button (click)="checkHeroName()">check hero name</button>
 
 <br>
 <br>
 <div>
   <label>Select Hero name:</label>
-  <select [value]="currentHero.name" (change)="currentHero.name=$event.target.value">
+  <!-- <select [value]="currentHero.name" (change)="currentHero.name=$event.target.value"> 
     <option value="">Select Hero</option>
     <option value="John Doe">John Doe</option>
     <option value="Chris">Chris</option>
     <option value="Evan">Evan</option>
-  </select>
+   </select> -->
 </div>
 
 <br>
