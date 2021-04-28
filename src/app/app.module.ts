@@ -11,7 +11,11 @@ import { ComponentsTemplatesModule } from './components-templates/components-tem
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { IndexComponent } from './index/index.component';
 import { RxDemoModule } from './rx-demo/rx-demo.module';
-
+import { ModulesDemoModule } from './modules-demo/modules-demo.module';
+import { CounterOneModule } from './counter-one/counter-one.module';
+import { CounterTwoModule } from './counter-two/counter-two.module';
+import { CoreModule } from './core/core.module';
+// import { ShareModule} from './share/share.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,12 @@ import { RxDemoModule } from './rx-demo/rx-demo.module';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    RxDemoModule
+    RxDemoModule,
+    ModulesDemoModule,
+    CounterOneModule.forRoot(),
+    CounterTwoModule,
+    CoreModule,
+    // ShareModule
 
   ],
   providers: [],

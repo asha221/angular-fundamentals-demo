@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// import { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -20,9 +20,13 @@ import { SubjectDemoComponent } from './rx-demo/subject-demo/subject-demo.compon
 import { OperatorsDemoComponent } from './rx-demo/operators-demo/operators-demo.component';
 import { DifferentOperatorsComponent } from './rx-demo/different-operators/different-operators.component';
 
+import { LazyLoadingDemoComponent } from './modules-demo/lazy-loading-demo/lazy-loading-demo.component';
+import { EagerVsLazyLoadingComponent } from './modules-demo/eager-vs-lazy-loading/eager-vs-lazy-loading.component';
+import { CounterHomeComponent as CounterOneHomeComponent } from './counter-one/counter-home/counter-home.component';
+import { CounterHomeComponent as CounterTwoHomeComponent } from './counter-two/counter-home/counter-home.component';
+
 import { IndexComponent } from './index/index.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
 
 const routes: Routes = [
   { path: 'index', component: IndexComponent },
@@ -46,6 +50,24 @@ const routes: Routes = [
   { path: 'rxjs/subjects-demo',component:SubjectDemoComponent},
   { path: 'rxjs/operators-demo',component:OperatorsDemoComponent},
   { path: 'rxjs/different-operators',component:DifferentOperatorsComponent},
+
+  /* NgModules lazy-loading routes */
+  { path: "modules-demo/lazy-loading-demo",component:LazyLoadingDemoComponent},
+
+  /* Lazy loading demo routes 
+  { path: 'customers', loadChildren: './customers/customers.module#CustomersModule' },
+  { path: 'orders', loadChildren: './orders/orders.module#OrdersModule' }, */
+
+  /* Angular 8 lazy loading syntax */
+  { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule)},
+  { path: 'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule)}, 
+
+  /* Eager Vs Lazy loading demo routes */
+  { path: 'modules-demo/eager-vs-lazy-loading',component:EagerVsLazyLoadingComponent},
+  { path: 'counter-one/counter-home/counter-home.component',component:CounterOneHomeComponent},
+  { path: 'counter-two/counter-home/counter-home.component',component:CounterTwoHomeComponent},
+  { path: 'lazy-counter-home', loadChildren:() => import('./counter-lazy/counter-lazy.module').then(m=>m.CounterLazyModule)},
+  // { path: 'lazy-counter-home', loadChildren: './counter-lazy/counter-lazy.module#CounterLazyModule' },
 
   { path:'',redirectTo: 'index' ,pathMatch:'full'},
   { path:'**', component:PageNotFoundComponent}

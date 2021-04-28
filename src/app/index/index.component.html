@@ -1,8 +1,9 @@
 <ngb-accordion #acc="ngbAccordion" class="index-page">
-  
+
   <ngb-panel id="toggle-1" title="Architecture">
     <ng-template ngbPanelContent>
-      Please implement atleast todos list page in <a href="https://github.com/angular-online/todos-angular-app" target="_blank">Todos app</a> to understand architecture of Angular framework.
+      Please implement atleast todos list page in <a href="https://github.com/angular-online/todos-angular-app"
+        target="_blank">Todos app</a> to understand architecture of Angular framework.
     </ng-template>
   </ngb-panel>
 
@@ -13,7 +14,8 @@
           <h6>1. Displaying Data</h6>
           <ul class="nested-list">
             <li><a [routerLink]="['/components-templates/display-data-in-template']">Component with template</a></li>
-            <li><a [routerLink]="['/components-templates/display-data-in-templateurl']">Component with template url</a></li>
+            <li><a [routerLink]="['/components-templates/display-data-in-templateurl']">Component with template url</a>
+            </li>
           </ul>
         </li>
 
@@ -36,7 +38,8 @@
         <li class="heading">
           <h6>4. Component Interaction</h6>
           <ul class="nested-list">
-            <li><a [routerLink]="['/components-templates/component-interaction']">Component Interaction Examples</a></li>
+            <li><a [routerLink]="['/components-templates/component-interaction']">Component Interaction Examples</a>
+            </li>
           </ul>
         </li>
 
@@ -47,13 +50,13 @@
           </ul>
         </li>
 
-         <li class="heading"> 
+        <li class="heading">
           <h6>6. Pipes</h6>
           <ul class="nested-list">
             <li><a [routerLink]="['/components-templates/pipes']">Pipes Examples</a></li>
           </ul>
         </li>
-        
+
       </ul>
     </ng-template>
   </ngb-panel>
@@ -79,10 +82,26 @@
             <li><a [routerLink]="['/rxjs/different-operators']">Different Operators</a></li>
           </ul>
         </li>
-        
+      </ul>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel id="toggle-4" title="NgModules & Dependency Injection">
+    <ng-template ngbPanelContent>
+      <ul class="index-list">
+        <li class="heading">
+          <h6>1. Lazy Loading Feature Modules</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/modules-demo/lazy-loading-demo']">Lazy Loading Feature Modules Demo</a></li>
+          </ul>
+        </li>
+        <li class="heading">
+          <h6>2. Singleton Services / Eager Loading Vs Lazy Loading</h6>
+          <ul class="nested-list">
+            <li><a [routerLink]="['/modules-demo/eager-vs-lazy-loading']">Eager Loading Vs Lazy Loading Demo</a></li>
+          </ul>
+        </li>
       </ul>
     </ng-template>
   </ngb-panel>
 
 </ngb-accordion>
-
